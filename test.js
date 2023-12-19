@@ -1,4 +1,3 @@
-function greet(name){
-    return "Hello, " + name +  " how are you doing today?"
-}
-greet("Kaka")
+let number = 25;
+console.log((''+number).length);
+console.log(number.toString().length);

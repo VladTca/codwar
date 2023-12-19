@@ -20,3 +20,10 @@ function sameCase(a, b){
         return 1}
     else  {return 0;}
 }
+//-----------------------------
+//ex.3
+function multiply(number){
+    let x= Math.abs(number);
+    x= x.toString().length;
+    return number*(5**x);
+}
