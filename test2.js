@@ -1,17 +1,9 @@
+function validateUsr(username) {
+    const res =/[a-z0-9_]+/;      //{4,16}
+    //const res =/\w[^A-Z ]{4,16}/
+    if (2<username.length<17){
 
-function multiply(number){
- let x= Math.abs(number);
- x= x.toString().length;
-
-    console.log(number*(5**x));
- return number*(5**x);
-
+      console.log(res.test(username));//regex here/.test(username)
+    return res.test(username);}
 }
-
-multiply(-2);
-//
-/* multiply(3)==15 // 3 * 5¹
-multiply(10)==250 // 10 * 5²
-multiply(200)==25000 // 200 * 5³
-multiply(0)==0 // 0 * 5¹
-multiply(-3)==-15 // -3 * 5¹ */
+validateUsr('gsr')
