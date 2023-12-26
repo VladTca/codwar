@@ -42,3 +42,38 @@ function validateUsr(username) {
     return res.test(username);}
 
 validateUsr('usernam')
+//----------------------------------------------------------
+function generateRange(start, stop, step) {
+    let arr = [];
+    for (let i = start; i <= stop; i += step) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+//-------------------------------------------
+var templateStrings = function(noun, adjective) {
+    return `${noun} are ${adjective}`
+}
+console.log(templateStrings('car','auto'));
+//-----------------------------
+function formatMoney(amount) {
+    let x = Number (amount);
+    return `${'$'+x.toFixed(2)}`
+}
+console.log(formatMoney(5.3))
+//---------------------------------
+function evenOrOdd(number) {
+    return Number(number) % 2 === 0 ? `${'Even'}` : `${'Odd'}`;
+}
+evenOrOdd(5)
+//--------------------------
+function spEng(sentence){
+    return sentence.toLowerCase().includes('english');
+}
+console.log(spEng('eereEnglishvf'))
+/*function spEng(s){
+   return /english/i.test(s)
+}*/
+//------------------------
+swapValues=(args) =>args.reverse()

@@ -1,9 +1,8 @@
-function validateUsr(username) {
-    const res =/[a-z0-9_]+/;      //{4,16}
-    //const res =/\w[^A-Z ]{4,16}/
-    if (2<username.length<17){
+let arr = [2, 3, 5, 7]
 
-      console.log(res.test(username));//regex here/.test(username)
-    return res.test(username);}
-}
-validateUsr('gsr')
+arr.map(function(element, index, array){
+    console.log(element);
+    console.log(index);
+    console.log(array);
+    return element;
+}, 80);

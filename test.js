@@ -1,1 +1,3 @@
-console.log("Let's get started!");
+function sayHi = () => {
+console.log('Hello world!');
+}
