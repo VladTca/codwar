@@ -249,3 +249,82 @@ function aliasGen(a,b){
 
 }
 console.log(aliasGen('Cbram','Bendera'))
+
+//----------------------------------------------------
+function doubleChar(str) {
+    let arr = Array.from(str);
+    let a="";
+    for(let i=0;i<str.length;i++){
+        a=a+arr[i]+arr[i];
+    }
+    return a;
+}
+console.log(doubleChar('abc'))
+
+/*function doubleChar(str) {
+    return str.replace(/(.)/g, "$1$1")
+}*/
+// const doubleChar = (str) => str.split("").map(c => c + c).join("");
+
+
+//---------------------------
+    const arr = [1,2,3,4,5,6,7];
+
+function take(arr, n) {
+    let arr1= arr.slice(0,n);
+    return arr1;}
+console.log(take(arr,3))
+
+//---------------------
+function hello(name) {
+    if (name == undefined || name == null || name == "") {
+        return 'Hello, World!'
+    } else {
+
+        return 'Hello, ' + name.at ( 0 ).toUpperCase () + name.slice ( 1 ).toLowerCase () + '!'
+    }
+}
+
+//let hello=(name)=> ( name == undefined || name == null || name == "") ? "Hello, World!" : "Hello, "
+//     + name.split("").map((x,i)=> i == 0 ? x = x.toUpperCase() : x = x.toLowerCase() ).join("") + "!"
+
+//--------------------------------
+
+function eachCons(array, n) {
+    let arr = [];
+    let inArr;
+    for(let i = 0; i < array.length; i++) {
+        inArr = array.slice(i, n + i)
+        if(inArr.length === n) {
+            arr.push(inArr)
+        }
+    }
+    return arr
+}
+console.log(eachCons([1,2,3,4,5,6]),2)
+//-----------------------------
+function compareNumbers(a, b) {
+    return a - b;
+}
+function mergeArrays(arr1, arr2) {
+    if (arr1 == [] && arr2 == []){
+        return []
+    }
+    let arr=[].concat(arr1,arr2);
+    let arrS= arr.sort(compareNumbers);
+    let arrX=[]
+    arrS.forEach((n)=> {
+        if (!arrX.includes(n)) {
+            arrX.push(n)
+        }
+    })
+    return arrX;
+}
+
+//function mergeArrays(arr1, arr2) {
+//   return Array.from(new Set(arr1.concat(arr2).sort((a,b) => (a-b))));
+// }
+
+//function mergeArrays(a, b) {
+//   return [...new Set(a.concat(b))].sort((a,b)=>a-b)
+// }
