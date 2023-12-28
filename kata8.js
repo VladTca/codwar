@@ -328,3 +328,29 @@ function mergeArrays(arr1, arr2) {
 //function mergeArrays(a, b) {
 //   return [...new Set(a.concat(b))].sort((a,b)=>a-b)
 // }
+
+
+function well(x){
+    if(x.includes('good')===false) return "Fail";
+    else {
+        let count=0;
+        for(let i=0;i<=x.length;i++){
+            if (x[i]==='good') count++
+        }
+        if (count>2) return 'I smell a series!';
+        else return 'Publish';
+    }
+
+}
+
+/*const well = x => {
+    const good_count = x.filter(x => x == 'good').length;
+    return good_count < 1 ? 'Fail!' :
+        good_count < 3 ? 'Publish!' : 'I smell a series!';
+}*/
+
+//----------------------------------------------------
+function stringClean(s){
+    return s.replace(/[0-9]/g, '');
+}
+//-------------------------
