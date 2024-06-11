@@ -1,12 +1,16 @@
-heights = [1, 1, 4, 2, 1, 3];
+var relativeSortArray = function(arr1, arr2) {
+  let rez=[];
+  for (let i = 0; i < arr2.length; i++) {
+    for (let j = 0; j < arr1.length; j++) {
 
-var heightChecker = function (heights) {
-  let expected = [...heights].sort((a, b) => a - b);
-  let count = 0;
-  for (let i = 0; i < heights.length; i++) {
-    if (heights[i] !== expected[i]) count++;
+      if (arr1[j] === arr2[i]) {
+        rez.push(arr1[j]);
+        arr1.splice(j, 1);
+        j--;
+      }
+    }
   }
-  return count;
-};
 
-console.log(heightChecker(heights));
+  rez = rez.concat(arr1);
+  return rez;
+};
